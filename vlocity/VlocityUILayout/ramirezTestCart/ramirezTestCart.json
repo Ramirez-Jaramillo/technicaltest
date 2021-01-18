@@ -1,0 +1,37 @@
+{
+    "Cards": [
+        "ramirezTestProductList"
+    ],
+    "GlobalKey__c": "ramirezTestCart/1/juan_ramirez/1610767595618",
+    "componentName": "cfRamirezTestCart",
+    "dataSource": {
+        "contextVariables": [
+            {
+                "name": "params.id",
+                "val": "8014x0000009bMRAAY"
+            }
+        ],
+        "type": "IntegrationProcedures",
+        "value": {
+            "inputMap": {
+                "cartId": "{{params.id}}"
+            },
+            "ipMethod": "CPQ_getCartProducts",
+            "optionsMap": {
+                "vlcClass": "%vlocity_namespace%.IntegrationProcedureService"
+            }
+        }
+    },
+    "enableLwc": true,
+    "lwc": {
+        "DeveloperName": "testCartContainer",
+        "Id": "0Rb4x000000iVWZCA2",
+        "MasterLabel": "testCartContainer",
+        "name": "testCartContainer"
+    },
+    "previewType": "runTime",
+    "repeatCards": false,
+    "workspace": [
+        "ramirezTestProductList/juan_ramirez/1/1610806137385"
+    ]
+}

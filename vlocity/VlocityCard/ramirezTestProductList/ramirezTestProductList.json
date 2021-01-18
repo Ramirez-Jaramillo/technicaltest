@@ -1,0 +1,61 @@
+{
+    "GlobalKey__c": "ramirezTestProductList/juan_ramirez/1/1610806137385",
+    "dataSource": {
+        "type": null,
+        "value": {
+            "resultVar": "['records']"
+        }
+    },
+    "enableLwc": true,
+    "filter": {
+    },
+    "states": [
+        {
+            "conditions": {
+                "group": [
+                    {
+                        "field": "$scope.data.status",
+                        "operator": "===",
+                        "type": "system",
+                        "value": "'active'"
+                    }
+                ]
+            },
+            "definedActions": {
+                "actions": [
+                ]
+            },
+            "fields": [
+                {
+                    "collapse": true,
+                    "displayLabel": "['Product2']['Name']",
+                    "editing": false,
+                    "group": "Custom Properties",
+                    "label": "Product",
+                    "name": "['Product2']['Name']",
+                    "type": "string"
+                },
+                {
+                    "collapse": true,
+                    "displayLabel": "['UnitPrice']['value']",
+                    "editing": false,
+                    "group": "Custom Properties",
+                    "label": "Price",
+                    "name": "['UnitPrice']['value']",
+                    "type": "string"
+                }
+            ],
+            "isSmartAction": false,
+            "lwc": {
+                "DeveloperName": "testProductList",
+                "Id": "0Rb4x000000iV68CAE",
+                "MasterLabel": "testProductList",
+                "name": "testProductList"
+            },
+            "name": "Active",
+            "smartAction": {
+            }
+        }
+    ],
+    "title": "Test Product List"
+}
