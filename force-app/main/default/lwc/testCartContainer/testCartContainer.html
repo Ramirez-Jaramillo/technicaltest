@@ -1,0 +1,28 @@
+<template>
+  <div class="via-slds jr-orderCartContainer">
+      <div class="slds-page-header">
+        <div class="slds-page-header__row">
+          <div class="slds-page-header__col-title">
+            <div class="slds-media">
+              <div class="slds-media__figure">
+                <!-- ICON -->
+              </div>
+              <div class="slds-media__body">
+                <div class="slds-page-header__name">
+                  <div class="slds-page-header__name-title">
+                    <h1>
+                      <span class="slds-page-header__title slds-truncate" title="Order Cart">Order Cart</span>
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slds-grid slds-gutters">
+          <div class="jr-productListContainer slds-col" if:true={showProductsIfDraft}><slot></slot></div>
+          <div class="slds-col slds-var-p-top_small"><c-test-order-items cartid={cartid} button-enabled={enableButtonValue}></c-test-order-items></div>
+      </div>
+  </div>
+</template>

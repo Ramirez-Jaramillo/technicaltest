@@ -1,0 +1,29 @@
+<template>
+    <div if:true={selectedState} class="slds-var-p-top_small">
+		<div class="slds-card via-slds-card--active slds-var-m-bottom_small">
+			<table class="slds-card__body slds-wrap slds-theme_default slds-var-p-around_medium">
+				<tr key={field.name} class="slds-tile slds-var-p-bottom_medium" for:each={state.fields} for:item="field"
+					for:index="index">
+					<td key={field.name} class="slds-col slds-truncate slds-text-heading_label slds-var-p-right_large"
+						title={field.label}>
+						{field.label}
+					</td>
+					<td key={field.label} class="slds-col slds-tile__detail slds-text-heading_small">
+						<vlocity_cmt-output-field record={obj} field-name={field.name} type={field.type}>
+						</vlocity_cmt-output-field>
+					</td>
+                </tr>
+			</table>
+			<div class="slds-var-p-left_small slds-var-p-bottom_medium">
+                <lightning-spinner alternative-text="Loading" size="small" if:true={showSpinner}></lightning-spinner>
+                <vlocity_cmt-button
+					variant="brand"
+					disabled=""
+					label="Add to Cart"
+					theme="slds"
+					onclick={trackInteraction}>
+				</vlocity_cmt-button>
+			</div>
+		</div>
+	</div>
+</template>

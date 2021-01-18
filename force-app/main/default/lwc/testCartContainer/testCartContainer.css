@@ -1,0 +1,11 @@
+.jr-orderCartContainer {
+    background: #ffffff;
+    border: 1px solid #DDDBDA;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.jr-productListContainer {
+    max-height: 400px;
+    overflow: auto;
+}

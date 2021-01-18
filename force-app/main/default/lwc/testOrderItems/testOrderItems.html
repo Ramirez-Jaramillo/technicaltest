@@ -1,0 +1,66 @@
+<template>
+    <div if:true={orderItems} class="slds-card via-slds-card--active slds-var-m-bottom_small">
+        <lightning-spinner alternative-text="Loading" size="small" if:true={showSpinner}></lightning-spinner>
+        <table class="slds-card__body slds-wrap slds-theme_default slds-var-p-around_medium">
+            <tr>
+                <td
+                    class="slds-col slds-truncate slds-text-heading_label slds-var-p-right_large slds-var-p-bottom_medium">
+                    Product</td>
+                <td
+                    class="slds-col slds-truncate slds-text-heading_label slds-var-p-right_large slds-var-p-bottom_medium">
+                    Quantity</td>
+                <td
+                    class="slds-col slds-truncate slds-text-heading_label slds-var-p-right_large slds-var-p-bottom_medium">
+                    One Time Price</td>
+                <td
+                    class="slds-col slds-truncate slds-text-heading_label slds-var-p-right_large slds-var-p-bottom_medium">
+                    Recurring Price</td>
+                <td
+                    class="slds-col slds-truncate slds-text-heading_label slds-var-p-right_large slds-var-p-bottom_medium">
+                    Total One Time Price</td>
+                <td
+                    class="slds-col slds-truncate slds-text-heading_label slds-var-p-right_large slds-var-p-bottom_medium">
+                    Total Recurring Price</td>
+            </tr>
+            <tr key={orderItem.name} class="slds-tile slds-var-p-bottom_medium" for:each={orderItems}
+                for:item="orderItem" for:index="index">
+                <td class="slds-col slds-truncate slds-var-p-right_large slds-var-p-bottom_small">
+                    {orderItem.Name}
+                </td>
+                <td class="slds-col slds-truncate slds-var-p-right_large slds-var-p-bottom_small">
+                    {orderItem.Quantity.value}
+                </td>
+                <td class="slds-col slds-truncate slds-var-p-right_large slds-var-p-bottom_small">
+                    {orderItem.vlocity_cmt__OneTimeCalculatedPrice__c.value}
+                </td>
+                <td class="slds-col slds-truncate slds-var-p-right_large slds-var-p-bottom_small">
+                    {orderItem.vlocity_cmt__RecurringCalculatedPrice__c.value}
+                </td>
+                <td class="slds-col slds-truncate slds-var-p-right_large slds-var-p-bottom_small">
+                    {orderItem.vlocity_cmt__OneTimeTotal__c.value}
+                </td>
+                <td class="slds-col slds-truncate slds-var-p-right_large slds-var-p-bottom_small">
+                    {orderItem.vlocity_cmt__RecurringTotal__c.value}
+                </td>
+            </tr>
+            <tr>
+                <td class="slds-col slds-tile__detail slds-text-heading_small">
+                    <vlocity_cmt-button variant="brand" disabled={_buttonEnabled} label="Confirm" theme="slds"
+                        onclick={confirmOrder}>
+                    </vlocity_cmt-button>
+                </td>
+            </tr>
+        </table>
+        
+        <div if:true={showError} class="slds-notify slds-notify_alert slds-alert_error" role="alert" style="background-color: #c23934">
+            <span class="slds-assistive-text">error</span>
+            <span class="slds-icon_container slds-icon-utility-error slds-m-right_x-small"
+                title="Description of icon when needed">
+                <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#error"></use>
+                </svg>
+            </span>
+            <h2>Unable to confirm the Order. Try again later</h2>
+        </div>
+    </div>
+</template>
