@@ -1,0 +1,32 @@
+Name: TechTestPackages
+ignoreDependencies: false
+VlocityDataPackKeys:
+    - DataRaptor/testGetOrderInfo
+    - DataRaptor/testGetOrderItemsByOrderId
+    - DataRaptor/testGetOrderStatus
+    - DataRaptor/testSetOrderItemStatus
+    - DataRaptor/testSetOrderStatus
+    - IntegrationProcedure/CPQ_confirmOrder
+    - IntegrationProcedure/CPQ_getCartItems
+    - IntegrationProcedure/CPQ_getCartProducts
+    - IntegrationProcedure/CPQ_getOrderInfo
+    - IntegrationProcedure/CPQ_getOrderStatus
+    - IntegrationProcedure/CPQ_postCartItem
+    - IntegrationProcedure/CPQ_putCartItems
+    - VlocityCard/ramirezTestProductList
+    - VlocityUILayout/ramirezTestCart
+    - lwc/testCartContainer
+    - lwc/testOrderItems
+    - lwc/testProductList
+VlocityTypesToFetch:
+    - DataRaptor
+    - IntegrationProcedure
+    - VlocityCard
+    - VlocityUILayout
+    - VlocityUITemplate
+SalesforceTypesToFetch:
+    - CompactLayout
+    - HomePageComponent
+    - HomePageLayout
+    - Layout
+    - LightningComponentBundle
