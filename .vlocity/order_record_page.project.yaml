@@ -1,0 +1,8 @@
+Name: Order Record Page
+ignoreDependencies: false
+VlocityDataPackKeys:
+    - flexipages/Order_Record_Page.flexipage
+VlocityTypesToFetch:
+
+SalesforceTypesToFetch:
+    - FlexiPage
