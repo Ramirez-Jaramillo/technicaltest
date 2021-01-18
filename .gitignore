@@ -9,6 +9,7 @@
 # vsCode
 .vscode
 
+
 # LWC VSCode autocomplete
 **/lwc/jsconfig.json
 
